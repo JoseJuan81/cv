@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./output.css" media="screen" />
+</head>
+<body>
+    <div class="container mt-40 mx-auto flex flex-wrap">
+        <div class="py-20 px-4 flex-35 text-primary relative">
+            <div class="absolute inset-x-0 top-0 flex justify-center">
+                <div class="w-40 h-40 bg-primaryGray rounded-full transform -translate-y-24"></div>
+            </div>
+            <h2 class="py-2 px-8 font-bold text-2xl text-textPrimary text-center mb-6 whitespace-no-wrap">
+                José Juan
+            </h2>
+            <ul>
+                <li class="item-profile selected-item-profile">
+                    <a href="">Mis Datos</a>
+                </li>
+                <li class="item-profile">Mis Órdenes</li>
+                <li class="item-profile">Mis Favoritos</li>
+                <li class="item-profile">Direcciones</li>
+                <li class="item-profile">Cerrar sesión</li>
+            </ul>
+        </div>
+        <div class="px-16 py-12 flex-65 bg-primaryGray rounded-md">
+            <!-- mostrar los datos del usuario -->
+            <div>botones para editar y cargar imagen</div>
+            <h3 class="mb-4 text-primary text-xl font-bold">Mis datos personales</h3>
+            <div>
+                <form id="user-form" class="grid grid-cols-2 row-gap-6 col-gap-2">
+                    <label for="name" class="flex flex-col">
+                        Nombre
+                        <input
+                            readonly
+                            id="name"
+                            type="text"
+                            placeholder="mi nombre"
+                            name="name"
+                            value="José Juan"
+                            class="no-input">
+                    </label>
+                    <label for="documentNumber" class="flex flex-col">
+                        Cédula
+                        <input
+                            type="text"
+                            name="documentNumber"
+                            id="documentNumber"
+                            value="16006652"
+                            class="no-input">
+                    </label>
+                    <label for="lastName" class="flex flex-col">
+                        Apellido
+                        <input type="text" name="lastName" id="lastName" class="no-input" value="Domínguez López">
+                    </label>
+                    <label for="ruc" class="flex flex-col">
+                        RUC
+                        <input type="text" name="ruc" id="ruc" class="no-input" value="15443365456">
+                    </label>
+                    <label for="gender" class="flex flex-col">
+                        Género
+                        <select form="user-form" name="gender" id="gender" class="no-input" disabled>
+                            <option value="1" selected>Caballero</option>
+                            <option value="2">Dama</option>
+                        </select>
+                    </label>
+                    <label for="postalCode" class="flex flex-col">
+                        Código postal
+                        <input type="text" name="postalCode" id="postalCode" class="no-input" value="lima34">
+                    </label>
+                    <label for="tel" class="flex flex-col">
+                        Teléfono
+                        <input type="tel" name="tel" id="tel" class="no-input" value="970127070">
+                    </label>
+                    <label for="province" class="flex flex-col">
+                        Provincia
+                        <select form="user-form" name="province" id="province"  class="no-input" disabled>
+                            <option value="1" selected>Lima</option>
+                            <option value="2">Arequipa</option>
+                            <option value="3">Tumbes</option>
+                        </select>
+                    </label>
+                    <label for="city" class="flex flex-col">
+                        Ciudad
+                        <select form="user-form" name="city" id="city" class="no-input" disabled>
+                            <option value="1">Lima</option>
+                            <option value="2">Arequipa</option>
+                            <option value="3" selected>Tumbes</option>
+                        </select>
+                    </label>
+                    <label for="distric" class="flex flex-col">
+                        Parroquia
+                        <select form="user-form" name="distric" id="distric" class="no-input" disabled>
+                            <option value="1">Lima</option>
+                            <option value="2" selected>Arequipa</option>
+                            <option value="3">Tumbes</option>
+                        </select>
+                    </label>
+                    <label for="email" class="flex flex-col">
+                        Correo
+                        <input type="email" name="email" id="email" class="no-input" value="jdominguez@apprunn.com">
+                    </label>
+                </form>
+            </div>
+            <!-- mostrar los datos del usuario -->
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700');
+@tailwind base;
+html {
+    font-family: 'Rubik';
+}
+@tailwind components;
+@tailwind utilities;
+
+.item-profile {
+    @apply text-textSecondary;
+    @apply py-2 px-16;
+}
+.selected-item-profile {
+    @apply text-primary font-bold;
+    @apply bg-primary bg-opacity-25;
+    @apply rounded-md;
+}
+
+.avatar-container {
+    @apply absolute;
+    /* @apply w-48 h-48; */
+    @apply bg-primaryGray;
+}
