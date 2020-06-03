@@ -5,43 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="./output.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="./css/output.css" media="screen" />
 </head>
 <body>
-    <div class="container mt-40 mx-auto flex flex-wrap">
+    <div class="container mt-40 mx-auto flex flex-wrap relative">
         <div class="py-20 px-4 flex-35 text-primary relative">
-            <div class="absolute inset-x-0 top-0 flex justify-center">
-                <div class="w-40 h-40 bg-primaryGray rounded-full transform -translate-y-24"></div>
+            <div class="sticky top-130">
+                <div class="absolute inset-x-0 -top-50 flex justify-center">
+                    <div class="w-40 h-40 bg-primaryGray rounded-full transform -translate-y-24"></div>
+                </div>
+                <h2 class="py-2 px-8 font-bold text-2xl text-textPrimary text-center mb-6 whitespace-no-wrap">
+                    José Juan
+                </h2>
+                <ul>
+                    <li class="item-profile selected-item-profile">
+                        <a href="">Mis Datos</a>
+                    </li>
+                    <li class="item-profile">Mis Órdenes</li>
+                    <li class="item-profile">Mis Favoritos</li>
+                    <li class="item-profile">Direcciones</li>
+                    <li class="item-profile">Cerrar sesión</li>
+                </ul>
             </div>
-            <h2 class="py-2 px-8 font-bold text-2xl text-textPrimary text-center mb-6 whitespace-no-wrap">
-                José Juan
-            </h2>
-            <ul>
-                <li class="item-profile selected-item-profile">
-                    <a href="">Mis Datos</a>
-                </li>
-                <li class="item-profile">Mis Órdenes</li>
-                <li class="item-profile">Mis Favoritos</li>
-                <li class="item-profile">Direcciones</li>
-                <li class="item-profile">Cerrar sesión</li>
-            </ul>
         </div>
         <div class="px-16 py-12 flex-65 bg-primaryGray rounded-md">
-            <!-- mostrar los datos del usuario -->
-            <div>botones para editar y cargar imagen</div>
-            <h3 class="mb-4 text-primary text-xl font-bold">Mis datos personales</h3>
+            <!-- datos de usuario -->
             <div>
-                <form id="user-form" class="grid grid-cols-2 row-gap-6 col-gap-2">
+                <button
+                    data-profile="editing-button"
+                    type="button"
+                    class="btn font-bold text-primary hover:text-white hover:bg-primary transform -translate-y-8 transform -translate-x-12 hover:translate-x-0 duration-200"
+                >Editar mis datos</button>
+            </div>
+            <h3 class="profile-section-title">Mis datos personales</h3>
+            <div>
+                <form id="user-form" class="grid grid-cols-2 row-gap-6 col-gap-4">
                     <label for="name" class="flex flex-col">
                         Nombre
                         <input
-                            readonly
                             id="name"
                             type="text"
                             placeholder="mi nombre"
                             name="name"
                             value="José Juan"
-                            class="no-input">
+                            class="input no-edit-input">
                     </label>
                     <label for="documentNumber" class="flex flex-col">
                         Cédula
@@ -50,34 +57,34 @@
                             name="documentNumber"
                             id="documentNumber"
                             value="16006652"
-                            class="no-input">
+                            class="input no-edit-input">
                     </label>
                     <label for="lastName" class="flex flex-col">
                         Apellido
-                        <input type="text" name="lastName" id="lastName" class="no-input" value="Domínguez López">
+                        <input type="text" name="lastName" id="lastName" class="input no-edit-input" value="Domínguez López">
                     </label>
                     <label for="ruc" class="flex flex-col">
                         RUC
-                        <input type="text" name="ruc" id="ruc" class="no-input" value="15443365456">
+                        <input type="text" name="ruc" id="ruc" class="input no-edit-input" value="15443365456">
                     </label>
                     <label for="gender" class="flex flex-col">
                         Género
-                        <select form="user-form" name="gender" id="gender" class="no-input" disabled>
+                        <select form="user-form" name="gender" id="gender" class="input no-edit-input">
                             <option value="1" selected>Caballero</option>
                             <option value="2">Dama</option>
                         </select>
                     </label>
                     <label for="postalCode" class="flex flex-col">
                         Código postal
-                        <input type="text" name="postalCode" id="postalCode" class="no-input" value="lima34">
+                        <input type="text" name="postalCode" id="postalCode" class="input no-edit-input" value="lima34">
                     </label>
                     <label for="tel" class="flex flex-col">
                         Teléfono
-                        <input type="tel" name="tel" id="tel" class="no-input" value="970127070">
+                        <input type="tel" name="tel" id="tel" class="input no-edit-input" value="970127070">
                     </label>
                     <label for="province" class="flex flex-col">
                         Provincia
-                        <select form="user-form" name="province" id="province"  class="no-input" disabled>
+                        <select form="user-form" name="province" id="province"  class="input no-edit-input">
                             <option value="1" selected>Lima</option>
                             <option value="2">Arequipa</option>
                             <option value="3">Tumbes</option>
@@ -85,7 +92,7 @@
                     </label>
                     <label for="city" class="flex flex-col">
                         Ciudad
-                        <select form="user-form" name="city" id="city" class="no-input" disabled>
+                        <select form="user-form" name="city" id="city" class="input no-edit-input">
                             <option value="1">Lima</option>
                             <option value="2">Arequipa</option>
                             <option value="3" selected>Tumbes</option>
@@ -93,7 +100,7 @@
                     </label>
                     <label for="distric" class="flex flex-col">
                         Parroquia
-                        <select form="user-form" name="distric" id="distric" class="no-input" disabled>
+                        <select form="user-form" name="distric" id="distric" class="input no-edit-input">
                             <option value="1">Lima</option>
                             <option value="2" selected>Arequipa</option>
                             <option value="3">Tumbes</option>
@@ -101,12 +108,17 @@
                     </label>
                     <label for="email" class="flex flex-col">
                         Correo
-                        <input type="email" name="email" id="email" class="no-input" value="jdominguez@apprunn.com">
+                        <input type="email" name="email" id="email" class="input no-edit-input" value="jdominguez@apprunn.com">
                     </label>
                 </form>
+                <div class="flex justify-center mt-8" data-profile="buttons-container">
+                    <button class="mx-4 btn btn-cancel" type="submit" data-profile="cancel-button">Cancelar</button>
+                    <button class="mx-4 btn btn-save" type="button" data-profile="save-button">Guardar</button>
+                </div>
             </div>
-            <!-- mostrar los datos del usuario -->
+            <!-- datos de usuario -->
         </div>
     </div>
+    <script src="./js/userData.js"></script>
 </body>
 </html>

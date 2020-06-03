@@ -625,14 +625,52 @@ html {
   }
 }
 
-.no-input{
-  background-color: transparent;
-  color: #7e7e7e;
-  padding: 0.5rem;
+.input{
+  height: 4rem;
+  padding: 0.75rem;
 }
 
-.no-input:focus{
+.input:focus{
   outline: none;
+}
+
+.edit-input{
+  background-color: white;
+  color: #10111e;
+}
+
+.no-edit-input{
+  background-color: transparent;
+  color: #7e7e7e;
+}
+
+.profile-section-title{
+  color: #E93F33;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.top-130{
+  top: 13rem;
+}
+
+.-top-50{
+  top: -5rem;
+}
+
+.btn{
+  color: white;
+  cursor: pointer;
+  padding: 1.2rem 3rem;
+}
+
+.btn-save{
+  background-color: #E93F33;
+}
+
+.btn-cancel{
+  background-color: #7e7e7e;
 }
 
 .space-y-0 > :not(template) ~ :not(template){
