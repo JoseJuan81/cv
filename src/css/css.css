@@ -9,6 +9,7 @@ html {
 .item-profile {
     @apply text-textSecondary;
     @apply py-2 px-16;
+    @apply duration-200;
 }
 .selected-item-profile {
     @apply text-primary font-bold;
@@ -18,6 +19,41 @@ html {
 
 .avatar-container {
     @apply absolute;
-    /* @apply w-48 h-48; */
     @apply bg-primaryGray;
+}
+
+.std-table {
+    @apply w-full text-left text-sm;
+}
+.std-table thead tr th {
+    @apply whitespace-no-wrap;
+}
+.std-table tbody tr td {
+    @apply p-2 text-sm text-textSecondary;
+    @apply duration-200;
+}
+.std-table tbody tr:nth-child(even) td {
+    @apply bg-white;
+}
+.std-table tbody tr:hover td {
+    @apply bg-primary bg-opacity-25 text-primary font-bold;
+}
+.std-table tbody tr:hover td:first-child {
+    @apply rounded-tl-md rounded-bl-md;
+}
+.std-table tbody tr:hover td:last-child {
+    @apply rounded-tr-md rounded-br-md;
+}
+.std-table tbody tr:nth-child(even) td:first-child {
+    @apply rounded-tl-md rounded-bl-md;
+}
+.std-table tbody tr:nth-child(even) td:last-child {
+    @apply rounded-tr-md rounded-br-md;
+}
+
+.favorites-table tbody tr td:first-child {
+    @apply grid grid-flow-col;
+}
+.favorites-table tbody tr td:first-child img {
+    @apply w-12 h-12 object-cover;
 }

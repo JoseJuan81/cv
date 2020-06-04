@@ -13,8 +13,8 @@ module.exports = {
         textSecondary: '#7e7e7e'
       },
       flex: {
-        35: '35%',
-        65: '65%'
+        30: '30%',
+        70: '70%'
       }
     },
   },
@@ -59,6 +59,9 @@ module.exports = {
           color: 'white',
           cursor: 'pointer',
           padding: '1.2rem 3rem',
+          '&:focus': {
+            outline: 'none',
+          },
         },
         '.btn-save': {
           backgroundColor: theme('colors.primary'),

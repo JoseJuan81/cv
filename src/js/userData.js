@@ -11,6 +11,7 @@ let flagEdit = false;
 // Inicializando
 buttonsContainer.style.display = 'none';
 
+// Obtener elementos por atributo dataset
 function getElementByDataSet(type, dataSet, value) {
     const el = document.getElementsByTagName(type);
     const len = el.length;
@@ -24,6 +25,7 @@ function getElementByDataSet(type, dataSet, value) {
     return output;
 }
 
+// Función de edición de datos
 function editAction() {
     flagEdit = !flagEdit;
     buttonsContainer.style.display = flagEdit ? 'flex' : 'none';
@@ -44,17 +46,18 @@ function editAction() {
     }
 }
 
-// function saveUserData() {
-//     const eles = userForm.elements;
-//     const len = eles.length;
-//     const body = {};
-//     for (let i = 0; i < len; i += 1) {
-//         const formEl = eles[i];
-//         const attr = formEl.getAttribute('name');
-//         body[attr] = userForm[attr].value;
-//     }
-//     console.log(body);
-// }
+// Función para guardar los datos del formulario
+function saveUserData() {
+    const eles = userForm.elements;
+    const len = eles.length;
+    const body = {};
+    for (let i = 0; i < len; i += 1) {
+        const formEl = eles[i];
+        const attr = formEl.getAttribute('name');
+        body[attr] = userForm[attr].value;
+    }
+    console.log(body);
+}
 editUserDataButton.addEventListener('click', editAction);
 cancelUserDataButton.addEventListener('click', editAction);
-saveUserDataButton.addEventListener('click', UserForm.save.bind(UserForm));
+saveUserDataButton.addEventListener('click', saveUserData);
