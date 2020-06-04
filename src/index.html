@@ -158,7 +158,13 @@
                                 <td>Pagado</td>
                                 <td>A domicilio</td>
                                 <td>Tarjeta de crédito</td>
-                                <td></td>
+                                <td>
+                                    <button type="button">Detalle</button>
+                                    <button
+                                        type="button"
+                                        class="h-6 w-6 rounded-full text-primary hover:text-white bg-transparent hover:bg-primary duration-200 leading-6 ml-2"
+                                    >x</button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>2020-05-30</td>
@@ -167,7 +173,13 @@
                                 <td>Pagado</td>
                                 <td>A domicilio</td>
                                 <td>Tarjeta de crédito</td>
-                                <td></td>
+                                <td>
+                                    <button type="button">Detalle</button>
+                                    <button
+                                        type="button"
+                                        class="h-6 w-6 rounded-full text-primary hover:text-white bg-transparent hover:bg-primary duration-200 leading-6 ml-2"
+                                    >x</button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>2020-05-30</td>
@@ -176,7 +188,13 @@
                                 <td>Pagado</td>
                                 <td>A domicilio</td>
                                 <td>Tarjeta de crédito</td>
-                                <td></td>
+                                <td>
+                                    <button type="button">Detalle</button>
+                                    <button
+                                        type="button"
+                                        class="h-6 w-6 rounded-full text-primary hover:text-white bg-transparent hover:bg-primary duration-200 leading-6 ml-2"
+                                    >x</button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>2020-05-30</td>
@@ -185,7 +203,13 @@
                                 <td>Pagado</td>
                                 <td>A domicilio</td>
                                 <td>Tarjeta de crédito</td>
-                                <td></td>
+                                <td>
+                                    <button type="button">Detalle</button>
+                                    <button
+                                        type="button"
+                                        class="h-6 w-6 rounded-full text-primary hover:text-white bg-transparent hover:bg-primary duration-200 leading-6 ml-2"
+                                    >x</button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>2020-05-30</td>
@@ -194,7 +218,13 @@
                                 <td>Pagado</td>
                                 <td>A domicilio</td>
                                 <td>Tarjeta de crédito</td>
-                                <td></td>
+                                <td>
+                                    <button type="button">Detalle</button>
+                                    <button
+                                        type="button"
+                                        class="h-6 w-6 rounded-full text-primary hover:text-white bg-transparent hover:bg-primary duration-200 leading-6 ml-2"
+                                    >x</button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>2020-05-30</td>
@@ -203,13 +233,131 @@
                                 <td>Pagado</td>
                                 <td>A domicilio</td>
                                 <td>Tarjeta de crédito</td>
-                                <td></td>
+                                <td>
+                                    <button type="button">Detalle</button>
+                                    <button
+                                        type="button"
+                                        class="h-6 w-6 rounded-full text-primary hover:text-white bg-transparent hover:bg-primary duration-200 leading-6 ml-2"
+                                    >x</button>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
             <!-- mis órdenes -->
+            <!-- Detalle de órden -->
+            <div class="">
+                <div class="flex items-center justify-end mb-4">
+                    <h2 class="text-textSecondary"><b class="text-textPrimary">Confirmado</b> - Nro órden 1442</h2>
+                </div>
+                <div class="flex justify-between items-center mb-4 border-b border-solid border-textSecondary">
+                    <h4 class="text-textSecondary"><b class="text-textPrimary">Precio total:</b> 400</h4>
+                    <h4 class="text-textSecondary"><b class="text-textPrimary">Fecha de la órden:</b> 2019-12-21</h4>
+                    <h4 class="text-textSecondary"><b class="text-textPrimary">Estado:</b> Pagado</h4>
+                </div>
+                <section class="mt-4">
+                    <h4 class="text-textSecondary"><b class="text-textPrimary">Dirección de envío:</b> Calle Robinson L30, urb. La Calera la Merced</h4>
+                    <h3 class="text-primary font-bold mt-2 text-xl">Datos del depósito</h3>
+                    <!-- Cargar imágen del voucher -->
+                    <div>
+                        <form class="my-4 grid grid-cols-2 gap-4">
+                            <label for="depositNumber" class="flex flex-col text-sm">
+                                Nro Depósito
+                                <input type="text" name="depositNumber" id="depositNumber" class="input edit-input" value="122312-12332-123">
+                            </label>
+                            <div class="flex items-end">
+                                <label for="paymentImg" class="flex flex-col text-sm flex-auto">
+                                    Constancia de pago
+                                    <input type="text" name="paymentImg" id="paymentImg" class="input edit-input" value="https://mi-imagen.com/si-pague">
+                                    <input type="file" class="hidden">
+                                </label>
+                                <button type="button" class="w-16 h-16 bg-primary flex items-center justify-center text-5xl text-white">+</button>
+                            </div>
+                        </form>
+                        <div class="flex justify-center mb-4 duration-200">
+                            <button class="mx-4 btn btn-cancel" type="submit" data-profile="cancel-button">Cancelar</button>
+                            <button class="mx-4 btn btn-save" type="button" data-profile="save-button">Guardar</button>
+                        </div>
+                    </div>
+                    <!-- Cargar imágen del voucher -->
+                </section>
+                <div>
+                    <table class="std-table favorites-table">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                                <th>Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQg8wZf7fUOK48Fc993hlXQF9RS_z8NiiHtErErB3azePE2rVq7&usqp=CAU"
+                                        alt="imagen_product"
+                                    >
+                                    <div>
+                                        <h4 class="font-bold">Gatorade</h4>
+                                        <h5 class="text-xs">Producto energizante</h5>
+                                    </div>
+                                </td>
+                                <td>S/.123</td>
+                                <td>3</td>
+                                <td>S/.369</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQg8wZf7fUOK48Fc993hlXQF9RS_z8NiiHtErErB3azePE2rVq7&usqp=CAU"
+                                        alt="imagen_product"
+                                    >
+                                    <div>
+                                        <h4 class="font-bold">Gatorade</h4>
+                                        <h5 class="text-xs">Producto energizante</h5>
+                                    </div>
+                                </td>
+                                <td>S/.200</td>
+                                <td>4</td>
+                                <td>S/. 800</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQg8wZf7fUOK48Fc993hlXQF9RS_z8NiiHtErErB3azePE2rVq7&usqp=CAU"
+                                        alt="imagen_product"
+                                    >
+                                    <div>
+                                        <h4 class="font-bold">Gatorade</h4>
+                                        <h5 class="text-xs">Producto energizante</h5>
+                                    </div>
+                                </td>
+                                <td>S/.80</td>
+                                <td>5</td>
+                                <td>S/. 400</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img
+                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQg8wZf7fUOK48Fc993hlXQF9RS_z8NiiHtErErB3azePE2rVq7&usqp=CAU"
+                                        alt="imagen_product"
+                                    >
+                                    <div>
+                                        <h4 class="font-bold">Gatorade</h4>
+                                        <h5 class="text-xs">Producto energizante</h5>
+                                    </div>
+                                </td>
+                                <td>S/.225</td>
+                                <td>1</td>
+                                <td>S/. 225</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Detalle de órden -->
             <!-- Mis Favoritos -->
             <div class="hidden">
                 <div class="mt-8">
@@ -289,7 +437,7 @@
             </div>
             <!-- Mis Favoritos -->
             <!-- Mis direcciones -->
-            <div class="">
+            <div class="hidden">
                 <div>
                     <form action="" id="new-direction" class="grid grid-flow-row grid-cols-3 gap-4">
                         <label for="alias" class="flex flex-col">
