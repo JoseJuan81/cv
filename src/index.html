@@ -251,16 +251,25 @@
                 <div class="flex items-center justify-end mb-4">
                     <h2 class="text-textSecondary"><b class="text-textPrimary">Confirmado</b> - Nro órden 1442</h2>
                 </div>
-                <div class="flex justify-between items-center mb-4 border-b border-solid border-textSecondary">
+                <div class="flex justify-between items-center mb-4 bg-white py-2 px-4 rounded-md">
                     <h4 class="text-textSecondary"><b class="text-textPrimary">Precio total:</b> 400</h4>
                     <h4 class="text-textSecondary"><b class="text-textPrimary">Fecha de la órden:</b> 2019-12-21</h4>
                     <h4 class="text-textSecondary"><b class="text-textPrimary">Estado:</b> Pagado</h4>
                 </div>
-                <section class="mt-4">
+                <section class="mt-4 mb-8">
                     <h4 class="text-textSecondary"><b class="text-textPrimary">Dirección de envío:</b> Calle Robinson L30, urb. La Calera la Merced</h4>
-                    <h3 class="text-primary font-bold mt-2 text-xl">Datos del depósito</h3>
-                    <!-- Cargar imágen del voucher -->
-                    <div>
+                    <!--Paso 1: Botón para agregar constancia de pago -->
+                    <div class="flex justify-start w-full mt-8">
+                        <button
+                            class="h-12 mx-4 btn btn-cancel col-span-2 py-2"
+                            type="button"
+                        >Cargar constancia</button>
+                    </div>
+                    <!--Paso 1: Botón para agregar constancia de pago -->
+                    
+                    <!--Paso 2: Cargar imágen del voucher -->
+                    <div class="hidden">
+                        <h3 class="text-primary font-bold mt-2 text-xl">Datos del depósito</h3>
                         <form class="my-4 grid grid-cols-2 gap-4">
                             <label for="depositNumber" class="flex flex-col text-sm">
                                 Nro Depósito
@@ -280,7 +289,27 @@
                             <button class="mx-4 btn btn-save" type="button" data-profile="save-button">Guardar</button>
                         </div>
                     </div>
-                    <!-- Cargar imágen del voucher -->
+                    <!--Paso 2: Cargar imágen del voucher -->
+
+                    <!--Paso 3: Constancia de pago cargada -->
+                    <div class="hidden">
+                        <h3 class="text-primary font-bold mt-2 text-xl">Datos del depósito</h3>
+                        <div class="grid grid-cols-7 items-center mb-4">
+                            <h4 class="text-textSecondary col-span-2"><b class="text-textPrimary">Estado:</b> Pagado</h4>
+                            <div class="col-span-3">
+                                <img
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQg8wZf7fUOK48Fc993hlXQF9RS_z8NiiHtErErB3azePE2rVq7&usqp=CAU"
+                                    alt="imagen_contancia_pago"
+                                    class="h-32 w-auto object-cover mx-auto"
+                                >
+                            </div>
+                            <button
+                                class="h-12 mx-4 btn btn-cancel col-span-2 py-2"
+                                type="button"
+                            >Editar</button>
+                        </div>
+                    </div>
+                    <!--Paso 3: Constancia de pago cargada -->
                 </section>
                 <div>
                     <table class="std-table favorites-table">
