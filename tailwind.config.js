@@ -1,7 +1,7 @@
 
 module.exports = {
   purge: [
-    'index.html',
+    './index.html',
   ],
   theme: {},
   variants: {},
