@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tail": "npx tailwindcss build src/css/css.css -o cv.css",
-    "tail:prod": "env NODE_ENV=production npx tailwindcss build src/css/css.css -o cv.css",
+    "tail": "npx tailwindcss build tailwind.css -o cv.css",
+    "tail:prod": "env NODE_ENV=production npx tailwindcss build tailwind.css -o cv.css"
   },
   "keywords": [],
   "author": "josejuan81",
