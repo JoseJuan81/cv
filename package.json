@@ -6,7 +6,8 @@
   "scripts": {
     "webpack": "webpack --mode production --entry index.html",
     "tail": "npx tailwindcss build src/css/css.css -o src/css/output.css",
-    "tail:prod": "env NODE_ENV=production npx tailwindcss build src/css.css -o src/output.css",
+    "tail:prod": "env NODE_ENV=production npx tailwindcss build src/css/css.css -o src/css/output.css",
+    "tail:cv": "npx tailwindcss build src/css/css.css -o cv.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

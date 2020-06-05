@@ -2,7 +2,7 @@ const plugin = require('tailwindcss/plugin')
 
 module.exports = {
   purge: [
-    'index.html',
+    'src/index.html',
   ],
   theme: {
     extend: {
@@ -12,10 +12,6 @@ module.exports = {
         textPrimary: '#10111e',
         textSecondary: '#7e7e7e'
       },
-      flex: {
-        30: '30%',
-        70: '70%'
-      }
     },
   },
   variants: {},
@@ -74,6 +70,17 @@ module.exports = {
       addComponents(title);
       addComponents(top);
       addComponents(btn);
+    }),
+    plugin(function({ addUtilities, theme }) {
+      const newUtilities = {
+        '.flex-30': {
+          flex: '1 1 30%',
+        },
+        '.flex-70': {
+          flex: '1 1 70%',
+        }
+      };
+      addUtilities(newUtilities);
     }),
   ],
 }
